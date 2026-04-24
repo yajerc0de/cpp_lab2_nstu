@@ -1,4 +1,7 @@
 fun main() {
+
+    System.setOut(java.io.PrintStream(System.out, true, "UTF-8"))
+    
     print("Введите количество чисел N: ")
     val n = readln().toInt()
 

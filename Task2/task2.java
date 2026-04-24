@@ -1,14 +1,16 @@
 import java.util.*;
 
 public class task2 {
-    // Международные коды Морзе для a..z
     private static final String[] MORSE = {
         ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
         "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
         "..-", "...-", ".--", "-..-", "-.--", "--.."
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
+        java.util.Locale.setDefault(java.util.Locale.forLanguageTag("ru-RU"));
+
         Scanner scanner = new Scanner(System.in, "UTF-8");
         System.out.println("Введите слова через пробел:");
         String line = scanner.nextLine();
@@ -30,7 +32,6 @@ public class task2 {
                     }
                 }
             }
-            // Пара точек и тире как уникальный ключ
             unique.add(dots + "," + dashes);
         }
 
